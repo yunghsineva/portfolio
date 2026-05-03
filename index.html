@@ -71,7 +71,7 @@
 
 /* SKILLS */
 .skills-wrap{display:flex;flex-direction:column;gap:1.2rem;margin-bottom:1.2rem}
-.skill-group-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem}
+.skill-group-label{font-family:'DM Mono',monospace;font-size:10px;background:var(--accent-light);border-color:rgba(196,123,58,.3);color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem}
 .skill-pills{display:flex;flex-wrap:wrap;gap:6px}
 .sk{font-size:12px;color:var(--ink2);background:#fff;border:1px solid var(--sand);padding:5px 12px;border-radius:20px;transition:all .15s}
 .sk:hover{border-color:var(--accent);color:var(--accent)}
@@ -215,7 +215,7 @@
         <div class="tl-title">Working Holiday · Australia</div>
         <div class="tl-sub">Broadening horizons, sharpening English, preparing for the next chapter</div>
         <div class="tl-desc">Decided to invest in myself — sat the IELTS, explored Australia, and committed to pursuing a master's in data science.</div>
-        <span class="whv-badge">✈ Working Holiday Visa</span>
+        
       </div>
     </div>
     <div class="tl-item">
@@ -270,7 +270,7 @@
   <div class="sec-label">Technical Skills</div>
   <div class="skills-wrap">
     <div>
-      <span class="sk hi">Data Analysis &amp; BI</span>
+      <div class="skill-group-label">Data Analysis &amp; BI</div>
       <div class="skill-pills">
         <span class="sk">Power BI</span><span class="sk">Tableau</span>
         <span class="sk">DAX</span><span class="sk">Power Query</span>
@@ -367,7 +367,7 @@
 <div class="panel" id="tab-proj">
   <div class="sec-label" style="margin-top:1.5rem">Projects</div>
   <div class="proj-grid">
-    <a href="https://github.com/yunghsineva/Bank-Churn-Analysis" target="_blank">
+    <a class="cc" href="https://github.com/yunghsineva/Bank-Churn-Analysis" target="_blank">
     <div class="proj-card">
       <div>
         <div class="proj-kind">EDA · Machine Learning · Personal Project</div>
