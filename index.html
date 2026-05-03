@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eva Lin · Data Analyst</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
+<html><head><style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400;500&display=swap');
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
   --cream:#faf7f2;--cream2:#f3ede3;--sand:#e8dfd0;
@@ -16,7 +8,7 @@
   --green:#3d6b4f;--green-light:#eaf2ed;
   --blue:#2c5282;--blue-light:#ebf0f8;
 }
-body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased}
+.port{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;min-height:100vh}
 .wrap{max-width:700px;margin:0 auto;padding:0 0 6rem}
 
 /* HERO */
@@ -29,19 +21,16 @@ body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;m
 .hero-title{font-family:'DM Mono',monospace;font-size:12px;color:var(--ink3);letter-spacing:.1em;margin-bottom:1rem}
 .hero-summary{font-size:14px;line-height:1.75;color:var(--ink2);max-width:500px;margin-bottom:1.4rem}
 .hero-summary strong{color:var(--ink);font-weight:500}
-
-/* CONTACT CHIPS */
 .contact-chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:1.4rem}
 .cc{display:inline-flex;align-items:center;gap:6px;font-family:'DM Mono',monospace;font-size:11px;color:var(--ink2);background:#fff;border:1px solid var(--sand);padding:5px 11px;border-radius:20px;text-decoration:none;transition:all .15s}
 .cc:hover{border-color:var(--accent);color:var(--accent)}
 .cc-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0}
-
 .hero-meta{display:flex;flex-wrap:wrap;gap:7px}
 .meta-chip{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3);border:1px solid var(--sand);background:#fff;padding:4px 10px;border-radius:20px}
 
-/* NAV TABS */
+/* NAV */
 .nav-tabs{display:flex;gap:0;border-bottom:1px solid var(--sand);background:#fff;position:sticky;top:0;z-index:10;padding:0 2rem}
-.tab{font-size:12px;color:var(--ink3);padding:12px 14px;cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;font-weight:500;white-space:nowrap;user-select:none}
+.tab{font-size:12px;color:var(--ink3);padding:12px 16px;cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;font-weight:500;white-space:nowrap;user-select:none}
 .tab:hover{color:var(--ink)}
 .tab.active{color:var(--accent);border-bottom-color:var(--accent)}
 
@@ -50,6 +39,58 @@ body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;m
 .panel.active{display:block}
 .sec-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:10px}
 .sec-label::after{content:'';flex:1;height:1px;background:var(--sand)}
+
+/* ── ABOUT ME ── */
+.bio-card{background:#fff;border:1px solid var(--sand);border-radius:12px;padding:1.6rem 1.6rem;margin-bottom:1.2rem;position:relative;overflow:hidden}
+.bio-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent);border-radius:3px 0 0 3px}
+.bio-text{font-size:14px;line-height:1.85;color:var(--ink2)}
+.bio-text strong{color:var(--ink);font-weight:500}
+.bio-text em{font-style:italic;color:var(--accent)}
+
+/* JOURNEY TIMELINE */
+.timeline{display:flex;flex-direction:column;gap:0;margin-bottom:1.2rem}
+.tl-item{display:grid;grid-template-columns:90px 1fr;gap:0 1.2rem;position:relative}
+.tl-item:not(:last-child) .tl-line{position:absolute;left:89px;top:22px;bottom:-8px;width:1px;background:var(--sand)}
+.tl-year{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3);padding-top:4px;text-align:right;letter-spacing:.04em}
+.tl-body{padding:0 0 1.4rem 1rem;border-left:none;position:relative}
+.tl-body::before{content:'';position:absolute;left:-5px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--accent);border:2px solid var(--cream)}
+.tl-title{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:3px}
+.tl-sub{font-size:12px;color:var(--accent);margin-bottom:4px}
+.tl-desc{font-size:12px;color:var(--ink2);line-height:1.6}
+
+/* WHV CHIP */
+.whv-badge{display:inline-flex;align-items:center;gap:5px;font-family:'DM Mono',monospace;font-size:9px;background:var(--green-light);color:var(--green);border:1px solid rgba(61,107,79,.2);padding:2px 8px;border-radius:3px;margin-top:4px}
+
+/* DOMAIN CARDS */
+.domain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:1.2rem}
+.domain-card{background:#fff;border:1px solid var(--sand);border-radius:10px;padding:1rem 1rem;text-align:center;transition:border-color .15s}
+.domain-card:hover{border-color:var(--accent)}
+.domain-icon{font-size:20px;margin-bottom:6px}
+.domain-name{font-size:12px;font-weight:500;color:var(--ink);margin-bottom:3px}
+.domain-sub{font-size:11px;color:var(--ink3)}
+
+/* SKILLS */
+.skills-wrap{display:flex;flex-direction:column;gap:1.2rem;margin-bottom:1.2rem}
+.skill-group-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem}
+.skill-pills{display:flex;flex-wrap:wrap;gap:6px}
+.sk{font-size:12px;color:var(--ink2);background:#fff;border:1px solid var(--sand);padding:5px 12px;border-radius:20px;transition:all .15s}
+.sk:hover{border-color:var(--accent);color:var(--accent)}
+.sk.hi{background:var(--accent-light);border-color:rgba(196,123,58,.3);color:var(--accent);font-weight:500}
+.prof-list{display:flex;flex-direction:column;gap:10px;margin-top:.8rem}
+.prof-row{display:grid;grid-template-columns:130px 1fr 28px;align-items:center;gap:10px}
+.prof-name{font-size:12px;color:var(--ink2)}
+.prof-track{height:3px;background:var(--sand);border-radius:2px;overflow:hidden}
+.prof-fill{height:100%;background:linear-gradient(to right,var(--accent),#e09a5a);border-radius:2px;transition:width 1.2s ease}
+.prof-n{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3);text-align:right}
+
+/* EDU */
+.edu-list{display:flex;flex-direction:column;gap:1rem;margin-bottom:1.2rem}
+.edu-card{background:#fff;border:1px solid var(--sand);border-radius:10px;padding:1.1rem 1.3rem;display:grid;grid-template-columns:1fr auto;gap:.3rem .5rem}
+.edu-deg{font-size:13px;font-weight:500;color:var(--ink);grid-column:1}
+.edu-period{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3);white-space:nowrap;grid-column:2;grid-row:1}
+.edu-school{font-size:12px;color:var(--accent);grid-column:1;margin-bottom:.4rem}
+.edu-detail{font-size:12px;color:var(--ink2);line-height:1.6;grid-column:1/3}
+.edu-honor{display:inline-block;margin-top:.4rem;font-family:'DM Mono',monospace;font-size:9px;background:#fef9e7;color:#b7791f;border:1px solid rgba(183,121,31,.2);padding:2px 8px;border-radius:3px}
 
 /* EXPERIENCE */
 .exp-list{display:flex;flex-direction:column;gap:1rem}
@@ -65,24 +106,9 @@ body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;m
 .exp-bullets li::before{content:'·';position:absolute;left:0;color:var(--accent)}
 .exp-tag{display:inline-block;margin-top:.7rem;font-family:'DM Mono',monospace;font-size:9px;background:var(--green-light);color:var(--green);border:1px solid rgba(61,107,79,.2);padding:2px 8px;border-radius:3px}
 
-/* SKILLS */
-.skills-wrap{display:flex;flex-direction:column;gap:1.5rem}
-.skill-group-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem}
-.skill-pills{display:flex;flex-wrap:wrap;gap:6px}
-.sk{font-size:12px;color:var(--ink2);background:#fff;border:1px solid var(--sand);padding:5px 12px;border-radius:20px;transition:all .15s}
-.sk:hover{border-color:var(--accent);color:var(--accent)}
-.sk.hi{background:var(--accent-light);border-color:rgba(196,123,58,.3);color:var(--accent);font-weight:500}
-
-.prof-list{display:flex;flex-direction:column;gap:10px;margin-top:1.2rem}
-.prof-row{display:grid;grid-template-columns:130px 1fr 28px;align-items:center;gap:10px}
-.prof-name{font-size:12px;color:var(--ink2)}
-.prof-track{height:3px;background:var(--sand);border-radius:2px;overflow:hidden}
-.prof-fill{height:100%;background:linear-gradient(to right,var(--accent),#e09a5a);border-radius:2px;transition:width 1.2s ease}
-.prof-n{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3);text-align:right}
-
 /* PROJECTS */
 .proj-grid{display:flex;flex-direction:column;gap:12px}
-.proj-card{background:#fff;border:1px solid var(--sand);border-radius:10px;padding:1.2rem 1.3rem;transition:all .15s;display:grid;grid-template-columns:1fr auto;gap:0 .8rem;text-decoration:none}
+.proj-card{background:#fff;border:1px solid var(--sand);border-radius:10px;padding:1.2rem 1.3rem;transition:all .15s;display:grid;grid-template-columns:1fr auto;gap:0 .8rem}
 .proj-card:hover{border-color:var(--accent);background:var(--accent-light)}
 .proj-kind{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:5px}
 .proj-name{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:5px}
@@ -93,284 +119,317 @@ body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;m
 .proj-card:hover .proj-arrow{color:var(--accent)}
 .proj-badge{display:inline-block;margin-top:.5rem;font-family:'DM Mono',monospace;font-size:9px;background:var(--blue-light);color:var(--blue);border:1px solid rgba(44,82,130,.2);padding:2px 8px;border-radius:3px}
 
-/* EDUCATION */
-.edu-list{display:flex;flex-direction:column;gap:1rem}
-.edu-card{background:#fff;border:1px solid var(--sand);border-radius:10px;padding:1.1rem 1.3rem;display:grid;grid-template-columns:1fr auto;gap:.3rem .5rem}
-.edu-deg{font-size:13px;font-weight:500;color:var(--ink);grid-column:1}
-.edu-period{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3);white-space:nowrap;grid-column:2;grid-row:1}
-.edu-school{font-size:12px;color:var(--accent);grid-column:1;margin-bottom:.5rem}
-.edu-detail{font-size:12px;color:var(--ink2);line-height:1.6;grid-column:1/3}
-.edu-honor{display:inline-block;margin-top:.5rem;font-family:'DM Mono',monospace;font-size:9px;background:#fef9e7;color:#b7791f;border:1px solid rgba(183,121,31,.2);padding:2px 8px;border-radius:3px}
-
 /* FOOTER */
 .footer{margin-top:3rem;padding:1.2rem 2rem;border-top:1px solid var(--sand);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px}
 .footer-l{font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:var(--ink3)}
 .footer-r{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3)}
-
-/* RESPONSIVE */
-@media(max-width:500px){
-  .nav-tabs{padding:0 1rem;overflow-x:auto}
-  .panel{padding:1.5rem 1rem 0}
-  .hero{padding:2rem 1.2rem 1.8rem}
-  .prof-row{grid-template-columns:100px 1fr 24px}
-  .edu-card{grid-template-columns:1fr}
-  .edu-period{grid-column:1;grid-row:auto}
-}
 </style>
-</head>
-<body>
-<div class="wrap">
 
-  <!-- HERO -->
-  <div class="hero">
-    <div class="hero-tag">Data Analyst · Open to opportunities</div>
-    <h1 class="hero-name">Eva <em>Lin</em></h1>
-    <p class="hero-title">Brisbane, Australia</p>
-    <p class="hero-summary">
-      <strong>1+ year</strong> translating complex datasets into business decisions.
-      Master of IT (Data Science) from <strong>QUT</strong> — GPA 6.2/7, Academic Excellence Award.
-      Experienced at QUT and Shopee across analytics, dashboards, and A/B testing.
+</head><body><div class="port"><div class="wrap">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-tag">Data Analyst · Open to opportunities</div>
+  <h1 class="hero-name">Eva <em>Lin</em></h1>
+  <p class="hero-title">Brisbane, Australia</p>
+  <p class="hero-summary">
+    <strong>1+ year</strong> translating complex datasets into business decisions.
+    Master of IT (Data Science) from <strong>QUT</strong> — GPA 6.2/7, Academic Excellence Award.
+    Background across analytics, e-commerce, finance, and education.
+  </p>
+  <div class="contact-chips">
+    <a class="cc" href="mailto:yunghsin0515@gmail.com"><div class="cc-dot"></div>yunghsin0515@gmail.com</a>
+    <a class="cc" href="https://linkedin.com/in/yung-hsin-eva-lin/" target="_blank"><div class="cc-dot"></div>LinkedIn</a>
+    <a class="cc" href="https://github.com/yunghsineva" target="_blank"><div class="cc-dot"></div>GitHub</a>
+    <a class="cc" href="tel:+61423874738"><div class="cc-dot"></div>+61 423 874 738</a>
+  </div>
+  <div class="hero-meta">
+    <span class="meta-chip">Python · SQL · Power BI · Tableau</span>
+    <span class="meta-chip">AWS · GCP · dbt</span>
+    <span class="meta-chip">Google Analytics Certified</span>
+  </div>
+</div>
+
+<!-- TABS -->
+<div class="nav-tabs">
+  <div class="tab active" onclick="switchTab('about',this)">About Me</div>
+  <div class="tab" onclick="switchTab('exp',this)">Experience</div>
+  <div class="tab" onclick="switchTab('proj',this)">Projects</div>
+</div>
+
+<!-- ══ ABOUT ME ══ -->
+<div class="panel active" id="tab-about">
+
+  <!-- Bio -->
+  <div class="sec-label" style="margin-top:1.5rem">Who I Am</div>
+  <div class="bio-card">
+    <p class="bio-text">
+      Hi! I'm Eva — a data analyst who genuinely loves finding the story hidden inside a messy spreadsheet.
+      I grew up in Taiwan, studied <strong>Finance &amp; International Business</strong> at Fu Jen Catholic University,
+      and spent a year interning at <strong>Shopee</strong> where I got hooked on using data to drive marketing and e-commerce decisions.
     </p>
-    <div class="contact-chips">
-      <a class="cc" href="mailto:yunghsin0515@gmail.com"><div class="cc-dot"></div>yunghsin0515@gmail.com</a>
-      <a class="cc" href="https://linkedin.com/in/yung-hsin-eva-lin/" target="_blank"><div class="cc-dot"></div>LinkedIn</a>
-      <a class="cc" href="https://github.com/yunghsineva" target="_blank"><div class="cc-dot"></div>GitHub</a>
-      <a class="cc" href="tel:+61423874738"><div class="cc-dot"></div>+61 423 874 738</a>
-    </div>
-    <div class="hero-meta">
-      <span class="meta-chip">Python · SQL · Power BI · Tableau</span>
-      <span class="meta-chip">AWS · GCP · dbt</span>
-      <span class="meta-chip">Google Analytics Certified</span>
-    </div>
+    <br>
+    <p class="bio-text">
+      After graduating, I took a leap and moved to Australia on a <em>working holiday</em> — a year of broadening my perspective,
+      improving my English, and realising I wanted to go deeper into the data world. That clarity pushed me to sit the IELTS,
+      get accepted into <strong>QUT's Master of IT (Data Science)</strong>, and dive headfirst into machine learning, databases, and analytics.
+    </p>
+    <br>
+    <p class="bio-text">
+      During my master's, I worked as an <strong>Assistant Data Analyst</strong> at QUT, building Power BI dashboards and SQL pipelines
+      for real institutional decisions. I also collaborated with the Queensland Government on a deep learning project,
+      and won a health-tech hackathon along the way. GPA 6.2/7 — and an Academic Excellence commendation I'm pretty proud of.
+    </p>
+    <br>
+    <p class="bio-text">
+      What makes me a bit different is my <strong>cross-domain background</strong>: I understand the language of education, e-commerce, and finance
+      — which means I can ask the right business questions before touching the data.
+      When I'm not wrangling datasets, you'll find me exploring new cities or obsessing over a good matcha.
+    </p>
   </div>
 
-  <!-- TABS -->
-  <div class="nav-tabs">
-    <div class="tab active" onclick="switchTab('exp',this)">Experience</div>
-    <div class="tab" onclick="switchTab('proj',this)">Projects</div>
-    <div class="tab" onclick="switchTab('skills',this)">Skills</div>
-    <div class="tab" onclick="switchTab('edu',this)">Education</div>
-  </div>
-
-  <!-- EXPERIENCE -->
-  <div class="panel active" id="tab-exp">
-    <div class="sec-label" style="margin-top:1.5rem">Work Experience</div>
-    <div class="exp-list">
-
-      <div class="exp-card">
-        <div class="exp-header">
-          <div class="exp-role">Assistant Data Analyst</div>
-          <div class="exp-period">Jan – Dec 2025</div>
-        </div>
-        <div class="exp-company">Queensland University of Technology · Brisbane</div>
-        <ul class="exp-bullets">
-          <li>Analysed 100K+ records with SQL &amp; Power BI across the student lifecycle (enrolment → completion)</li>
-          <li>Built Power BI dashboards tracking survey response rates by faculty — reduced stakeholder enquiries by <strong>40%</strong></li>
-          <li>Built ETL workflows with Power Query &amp; SQL — improved reporting efficiency &amp; accuracy by <strong>15%</strong></li>
-          <li>Delivered 10+ ad-hoc analyses for curriculum planning, student success &amp; compliance reporting</li>
-          <li>Generated admission insights by integrating enrolment &amp; ATAR data to support faculty decisions</li>
-        </ul>
-        <span class="exp-tag">Power BI · SQL · Power Query · DAX</span>
+  <!-- Journey -->
+  <div class="sec-label">My Journey</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-line"></div>
+      <div class="tl-year">2018–22</div>
+      <div class="tl-body">
+        <div class="tl-title">Bachelor of Finance &amp; International Business</div>
+        <div class="tl-sub">Fu Jen Catholic University · Taiwan</div>
+        <div class="tl-desc">Specialised in supply chain and marketing. Participated in B2B cross-border e-commerce competitions.</div>
       </div>
-
-      <div class="exp-card">
-        <div class="exp-header">
-          <div class="exp-role">Category Management Analyst Intern</div>
-          <div class="exp-period">Feb – Aug 2022</div>
-        </div>
-        <div class="exp-company">Shopee Taiwan</div>
-        <ul class="exp-bullets">
-          <li>Analysed campaign &amp; sales data to identify high-potential products, visualised trends with Excel</li>
-          <li>Developed brand-tailored coupon strategies — increased conversion rate by <strong>10%</strong></li>
-          <li>Optimised Father's Day campaign via historical data &amp; keyword analysis — lifted CTR by <strong>30%</strong></li>
-        </ul>
-        <span class="exp-tag">Excel · Campaign Analysis · A/B Testing</span>
+    </div>
+    <div class="tl-item">
+      <div class="tl-line"></div>
+      <div class="tl-year">2021–22</div>
+      <div class="tl-body">
+        <div class="tl-title">Analyst Intern · Shopee Taiwan</div>
+        <div class="tl-sub">Marketing Partnership &amp; Category Management</div>
+        <div class="tl-desc">One year across two teams — got my first real taste of data-driven marketing in a fast-paced e-commerce environment.</div>
       </div>
-
-      <div class="exp-card">
-        <div class="exp-header">
-          <div class="exp-role">Marketing Partnership Intern</div>
-          <div class="exp-period">Jul 2021 – Jan 2022</div>
-        </div>
-        <div class="exp-company">Shopee Taiwan</div>
-        <ul class="exp-bullets">
-          <li>Optimised coupon landing page through iterative analysis, improving click-through rate</li>
-          <li>Monitored competitor e-commerce partnerships to identify cooperation opportunities</li>
-        </ul>
-        <span class="exp-tag">Marketing Analytics · Competitive Research</span>
+    </div>
+    <div class="tl-item">
+      <div class="tl-line"></div>
+      <div class="tl-year">2022–23</div>
+      <div class="tl-body">
+        <div class="tl-title">Working Holiday · Australia</div>
+        <div class="tl-sub">Broadening horizons, sharpening English, preparing for the next chapter</div>
+        <div class="tl-desc">Decided to invest in myself — sat the IELTS, explored Australia, and committed to pursuing a master's in data science.</div>
+        <span class="whv-badge">✈ Working Holiday Visa</span>
       </div>
-
+    </div>
+    <div class="tl-item">
+      <div class="tl-line"></div>
+      <div class="tl-year">2023–25</div>
+      <div class="tl-body">
+        <div class="tl-title">Master of IT (Data Science) · QUT</div>
+        <div class="tl-sub">GPA 6.2/7 · Academic Excellence Award</div>
+        <div class="tl-desc">Machine learning, databases, analytics, and Tableau. Worked as Assistant Data Analyst at QUT concurrently.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2025→</div>
+      <div class="tl-body">
+        <div class="tl-title">Open to full-time Data Analyst roles</div>
+        <div class="tl-sub">Brisbane · Open to relocation</div>
+        <div class="tl-desc">Looking for a team where data drives real decisions. Let's connect!</div>
+      </div>
     </div>
   </div>
 
-  <!-- PROJECTS -->
-  <div class="panel" id="tab-proj">
-    <div class="sec-label" style="margin-top:1.5rem">Projects</div>
-    <div class="proj-grid">
-
-      <a class="proj-card" href="#" onclick="return false;">
-        <div>
-          <div class="proj-kind">EDA · Machine Learning · Personal Project</div>
-          <div class="proj-name">Bank Customer Churn Analysis</div>
-          <div class="proj-desc">Identified low-income new customers as highest-risk cohort (64% churn rate). Quantified $52,320 annual revenue at risk — retention strategy achieves 1.2× ROI at 25% recovery.</div>
-          <div class="proj-tools">
-            <span class="ptool">Python</span><span class="ptool">pandas</span><span class="ptool">seaborn</span><span class="ptool">Chi-square</span>
-          </div>
-          <span class="proj-badge">Apr 2026</span>
-        </div>
-        <div class="proj-arrow">↗</div>
-      </a>
-
-      <a class="proj-card" href="#" onclick="return false;">
-        <div>
-          <div class="proj-kind">Deep Learning · Industry Project · QUT × Qld Gov</div>
-          <div class="proj-name">Unlocking Queensland's Imagery Data</div>
-          <div class="proj-desc">Collaborated with Queensland Government to build a segmentation model extracting building footprints from aerial imagery. Achieved MIoU of 88.39% using Mask2Former &amp; SAM.</div>
-          <div class="proj-tools">
-            <span class="ptool">Python</span><span class="ptool">PyTorch</span><span class="ptool">Vertex AI</span><span class="ptool">GCP</span><span class="ptool">Jira</span>
-          </div>
-          <span class="proj-badge">Feb – Jun 2025</span>
-        </div>
-        <div class="proj-arrow">↗</div>
-      </a>
-
-      <a class="proj-card" href="#" onclick="return false;">
-        <div>
-          <div class="proj-kind">Hackathon · AWS · Won 🏆</div>
-          <div class="proj-name">Health Tech ProtoComp</div>
-          <div class="proj-desc">Won Innovation Central Brisbane hackathon. Proposed AI summarization + hardware wristband for aged care patient data management. Set up AWS (EC2, S3, RDS) prototype infrastructure.</div>
-          <div class="proj-tools">
-            <span class="ptool">AWS EC2</span><span class="ptool">S3</span><span class="ptool">RDS</span><span class="ptool">Node.js</span>
-          </div>
-          <span class="proj-badge">Sep – Dec 2024</span>
-        </div>
-        <div class="proj-arrow">↗</div>
-      </a>
-
+  <!-- Domain expertise -->
+  <div class="sec-label">Domain Knowledge</div>
+  <div class="domain-grid">
+    <div class="domain-card">
+      <div class="domain-icon">🎓</div>
+      <div class="domain-name">Education</div>
+      <div class="domain-sub">Student lifecycle, enrolment analytics</div>
+    </div>
+    <div class="domain-card">
+      <div class="domain-icon">🛒</div>
+      <div class="domain-name">E-Commerce</div>
+      <div class="domain-sub">Campaign analysis, conversion, CTR</div>
+    </div>
+    <div class="domain-card">
+      <div class="domain-icon">📊</div>
+      <div class="domain-name">Finance</div>
+      <div class="domain-sub">Supply chain, international business</div>
     </div>
   </div>
 
-  <!-- SKILLS -->
-  <div class="panel" id="tab-skills">
-    <div class="sec-label" style="margin-top:1.5rem">Technical Skills</div>
-    <div class="skills-wrap">
-      <div>
-        <div class="skill-group-label">Data Analysis &amp; BI</div>
-        <div class="skill-pills">
-          <span class="sk hi">Power BI</span><span class="sk hi">Tableau</span>
-          <span class="sk">DAX</span><span class="sk">Power Query</span>
-          <span class="sk">Microsoft Fabric</span><span class="sk">Google Analytics</span>
-        </div>
-      </div>
-      <div>
-        <div class="skill-group-label">Programming &amp; Query</div>
-        <div class="skill-pills">
-          <span class="sk hi">Python</span><span class="sk hi">SQL (MySQL)</span>
-          <span class="sk">pandas</span><span class="sk">NumPy</span>
-          <span class="sk">matplotlib</span><span class="sk">seaborn</span>
-        </div>
-      </div>
-      <div>
-        <div class="skill-group-label">Cloud &amp; Engineering</div>
-        <div class="skill-pills">
-          <span class="sk">AWS (EC2, RDS, S3)</span><span class="sk">GCP Vertex AI</span>
-          <span class="sk">dbt Cloud</span><span class="sk">Jupyter</span>
-        </div>
-      </div>
-      <div>
-        <div class="skill-group-label">Analytics Methods</div>
-        <div class="skill-pills">
-          <span class="sk hi">A/B Testing</span><span class="sk hi">EDA</span>
-          <span class="sk">Statistical Analysis</span><span class="sk">Machine Learning</span>
-          <span class="sk">Cohort Analysis</span><span class="sk">ETL</span>
-        </div>
+  <!-- Skills -->
+  <div class="sec-label">Technical Skills</div>
+  <div class="skills-wrap">
+    <div>
+      <div class="skill-group-label">Data Analysis &amp; BI</div>
+      <div class="skill-pills">
+        <span class="sk hi">Power BI</span><span class="sk hi">Tableau</span>
+        <span class="sk">DAX</span><span class="sk">Power Query</span>
+        <span class="sk">Microsoft Fabric</span><span class="sk">Google Analytics</span>
       </div>
     </div>
-
-    <div class="sec-label" style="margin-top:2rem">Proficiency</div>
-    <div class="prof-list" id="profs"></div>
-  </div>
-
-  <!-- EDUCATION -->
-  <div class="panel" id="tab-edu">
-    <div class="sec-label" style="margin-top:1.5rem">Education &amp; Certifications</div>
-    <div class="edu-list">
-
-      <div class="edu-card">
-        <div class="edu-deg">Master of Information Technology (Data Science)</div>
-        <div class="edu-period">Jul 2023 – Jul 2025</div>
-        <div class="edu-school">Queensland University of Technology · Brisbane, Australia</div>
-        <div class="edu-detail">
-          GPA 6.2 / 7 &nbsp;·&nbsp; Coursework: Database, Python, Data Analytics, Machine Learning, Tableau<br>
-          <span class="edu-honor">🏅 QUT Executive Dean's Commendation for Academic Excellence</span>
-        </div>
+    <div>
+      <div class="skill-group-label">Programming &amp; Query</div>
+      <div class="skill-pills">
+        <span class="sk hi">Python</span><span class="sk hi">SQL (MySQL)</span>
+        <span class="sk">pandas</span><span class="sk">NumPy</span>
+        <span class="sk">matplotlib</span><span class="sk">seaborn</span>
       </div>
-
-      <div class="edu-card">
-        <div class="edu-deg">Bachelor of Finance and International Business</div>
-        <div class="edu-period">Aug 2018 – Jun 2022</div>
-        <div class="edu-school">Fu Jen Catholic University · New Taipei, Taiwan</div>
-        <div class="edu-detail">
-          E-Commerce &amp; FinTech Micro Program · B2B Cross-border E-commerce Competition<br>
-          <span class="edu-honor">🏅 Order Award &amp; Listing Award</span>
-        </div>
+    </div>
+    <div>
+      <div class="skill-group-label">Cloud &amp; Engineering</div>
+      <div class="skill-pills">
+        <span class="sk">AWS (EC2, RDS, S3)</span><span class="sk">GCP Vertex AI</span>
+        <span class="sk">dbt Cloud</span><span class="sk">Jupyter</span>
       </div>
-
-      <div class="edu-card">
-        <div class="edu-deg">Google Analytics Certification</div>
-        <div class="edu-period">Sep 2025</div>
-        <div class="edu-school">Google</div>
-        <div class="edu-detail">Certified in Google Analytics platform, data collection, and reporting.</div>
+    </div>
+    <div>
+      <div class="skill-group-label">Analytics Methods</div>
+      <div class="skill-pills">
+        <span class="sk hi">A/B Testing</span><span class="sk hi">EDA</span>
+        <span class="sk">Statistical Analysis</span><span class="sk">Machine Learning</span>
+        <span class="sk">Cohort Analysis</span><span class="sk">ETL</span>
       </div>
-
     </div>
   </div>
 
-  <!-- FOOTER -->
-  <div class="footer">
-    <span class="footer-l">Eva Lin</span>
-    <span class="footer-r">Data Analyst · Brisbane · 2025</span>
+  <div class="sec-label" style="margin-top:.5rem">Proficiency</div>
+  <div class="prof-list" id="profs"><div class="prof-row"><span class="prof-name">SQL</span><div class="prof-track"><div class="prof-fill" style="width: 88%;" data-v="88"></div></div><span class="prof-n">88</span></div><div class="prof-row"><span class="prof-name">Python</span><div class="prof-track"><div class="prof-fill" style="width: 82%;" data-v="82"></div></div><span class="prof-n">82</span></div><div class="prof-row"><span class="prof-name">Power BI / DAX</span><div class="prof-track"><div class="prof-fill" style="width: 85%;" data-v="85"></div></div><span class="prof-n">85</span></div><div class="prof-row"><span class="prof-name">Tableau</span><div class="prof-track"><div class="prof-fill" style="width: 75%;" data-v="75"></div></div><span class="prof-n">75</span></div><div class="prof-row"><span class="prof-name">Machine Learning</span><div class="prof-track"><div class="prof-fill" style="width: 68%;" data-v="68"></div></div><span class="prof-n">68</span></div><div class="prof-row"><span class="prof-name">AWS / GCP</span><div class="prof-track"><div class="prof-fill" style="width: 60%;" data-v="60"></div></div><span class="prof-n">60</span></div></div>
+  <div style="height:1.5rem"></div>
+
+  <!-- Education -->
+  <div class="sec-label" style="margin-top:.5rem">Education &amp; Certifications</div>
+  <div class="edu-list">
+    <div class="edu-card">
+      <div class="edu-deg">Master of Information Technology (Data Science)</div>
+      <div class="edu-period">Jul 2023 – Jul 2025</div>
+      <div class="edu-school">Queensland University of Technology · Brisbane, Australia</div>
+      <div class="edu-detail">GPA 6.2 / 7 &nbsp;·&nbsp; Coursework: Database, Python, Data Analytics, Machine Learning, Tableau<br>
+        <span class="edu-honor">🏅 QUT Executive Dean's Commendation for Academic Excellence</span></div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-deg">Bachelor of Finance and International Business</div>
+      <div class="edu-period">Aug 2018 – Jun 2022</div>
+      <div class="edu-school">Fu Jen Catholic University · New Taipei, Taiwan</div>
+      <div class="edu-detail">E-Commerce &amp; FinTech Micro Program · B2B Cross-border E-commerce Competition<br>
+        <span class="edu-honor">🏅 Order Award &amp; Listing Award</span></div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-deg">Google Analytics Certification</div>
+      <div class="edu-period">Sep 2025</div>
+      <div class="edu-school">Google</div>
+      <div class="edu-detail">Certified in Google Analytics platform, data collection, and reporting.</div>
+    </div>
   </div>
 
 </div>
 
+<!-- ══ EXPERIENCE ══ -->
+<div class="panel" id="tab-exp">
+  <div class="sec-label" style="margin-top:1.5rem">Work Experience</div>
+  <div class="exp-list">
+    <div class="exp-card">
+      <div class="exp-header"><div class="exp-role">Assistant Data Analyst</div><div class="exp-period">Jan – Dec 2025</div></div>
+      <div class="exp-company">Queensland University of Technology · Brisbane</div>
+      <ul class="exp-bullets">
+        <li>Analysed 100K+ records with SQL &amp; Power BI across the student lifecycle (enrolment → completion)</li>
+        <li>Built Power BI dashboards tracking survey response rates by faculty — reduced stakeholder enquiries by <strong>40%</strong></li>
+        <li>Built ETL workflows with Power Query &amp; SQL — improved reporting efficiency &amp; accuracy by <strong>15%</strong></li>
+        <li>Delivered 10+ ad-hoc analyses for curriculum planning, student success &amp; compliance reporting</li>
+        <li>Generated admission insights by integrating enrolment &amp; ATAR data to support faculty decisions</li>
+      </ul>
+      <span class="exp-tag">Power BI · SQL · Power Query · DAX</span>
+    </div>
+    <div class="exp-card">
+      <div class="exp-header"><div class="exp-role">Category Management Analyst Intern</div><div class="exp-period">Feb – Aug 2022</div></div>
+      <div class="exp-company">Shopee Taiwan</div>
+      <ul class="exp-bullets">
+        <li>Analysed campaign &amp; sales data to identify high-potential products, visualised trends with Excel</li>
+        <li>Developed brand-tailored coupon strategies — increased conversion rate by <strong>10%</strong></li>
+        <li>Optimised Father's Day campaign via historical data &amp; keyword analysis — lifted CTR by <strong>30%</strong></li>
+      </ul>
+      <span class="exp-tag">Excel · Campaign Analysis · A/B Testing</span>
+    </div>
+    <div class="exp-card">
+      <div class="exp-header"><div class="exp-role">Marketing Partnership Intern</div><div class="exp-period">Jul 2021 – Jan 2022</div></div>
+      <div class="exp-company">Shopee Taiwan</div>
+      <ul class="exp-bullets">
+        <li>Optimised coupon landing page through iterative analysis, improving click-through rate</li>
+        <li>Monitored competitor e-commerce partnerships to identify cooperation opportunities</li>
+      </ul>
+      <span class="exp-tag">Marketing Analytics · Competitive Research</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PROJECTS ══ -->
+<div class="panel" id="tab-proj">
+  <div class="sec-label" style="margin-top:1.5rem">Projects</div>
+  <div class="proj-grid">
+    <div class="proj-card">
+      <div>
+        <div class="proj-kind">EDA · Machine Learning · Personal Project</div>
+        <div class="proj-name">Bank Customer Churn Analysis</div>
+        <div class="proj-desc">Identified low-income new customers as highest-risk cohort (64% churn rate). Quantified $52,320 annual revenue at risk — retention strategy achieves 1.2× ROI at 25% recovery.</div>
+        <div class="proj-tools"><span class="ptool">Python</span><span class="ptool">pandas</span><span class="ptool">seaborn</span><span class="ptool">Chi-square</span></div>
+        <span class="proj-badge">Apr 2026</span>
+      </div>
+      <div class="proj-arrow">↗</div>
+    </div>
+    <div class="proj-card">
+      <div>
+        <div class="proj-kind">Deep Learning · Industry Project · QUT × Qld Gov</div>
+        <div class="proj-name">Unlocking Queensland's Imagery Data</div>
+        <div class="proj-desc">Collaborated with Queensland Government to build a segmentation model extracting building footprints from aerial imagery. Achieved MIoU of 88.39% using Mask2Former &amp; SAM.</div>
+        <div class="proj-tools"><span class="ptool">Python</span><span class="ptool">PyTorch</span><span class="ptool">Vertex AI</span><span class="ptool">GCP</span><span class="ptool">Jira</span></div>
+        <span class="proj-badge">Feb – Jun 2025</span>
+      </div>
+      <div class="proj-arrow">↗</div>
+    </div>
+    <div class="proj-card">
+      <div>
+        <div class="proj-kind">Hackathon · AWS · Won 🏆</div>
+        <div class="proj-name">Health Tech ProtoComp</div>
+        <div class="proj-desc">Won Innovation Central Brisbane hackathon. Proposed AI summarization + hardware wristband for aged care patient data management. Set up AWS (EC2, S3, RDS) prototype infrastructure.</div>
+        <div class="proj-tools"><span class="ptool">AWS EC2</span><span class="ptool">S3</span><span class="ptool">RDS</span><span class="ptool">Node.js</span></div>
+        <span class="proj-badge">Sep – Dec 2024</span>
+      </div>
+      <div class="proj-arrow">↗</div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <span class="footer-l">Eva Lin</span>
+  <span class="footer-r">Data Analyst · Brisbane · 2025</span>
+</div>
+
+</div></div>
 <script>
-function switchTab(id, el) {
-  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  document.getElementById('tab-' + id).classList.add('active');
+function switchTab(id,el){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
   el.classList.add('active');
-  if (id === 'skills') setTimeout(animateBars, 100);
+  setTimeout(animateBars,100);
 }
-
-const profs = [
-  { n: 'SQL', v: 88 },
-  { n: 'Python', v: 82 },
-  { n: 'Power BI / DAX', v: 85 },
-  { n: 'Tableau', v: 75 },
-  { n: 'Machine Learning', v: 68 },
-  { n: 'AWS / GCP', v: 60 },
+const profs=[
+  {n:'SQL',v:88},{n:'Python',v:82},{n:'Power BI / DAX',v:85},
+  {n:'Tableau',v:75},{n:'Machine Learning',v:68},{n:'AWS / GCP',v:60}
 ];
-
-function buildBars() {
-  const c = document.getElementById('profs');
-  if (!c || c.children.length) return;
-  profs.forEach(d => {
-    c.innerHTML += `<div class="prof-row">
-      <span class="prof-name">${d.n}</span>
-      <div class="prof-track"><div class="prof-fill" style="width:0" data-v="${d.v}"></div></div>
-      <span class="prof-n">${d.v}</span>
-    </div>`;
+function buildBars(){
+  const c=document.getElementById('profs');
+  if(!c||c.children.length)return;
+  profs.forEach(d=>{
+    c.innerHTML+=`<div class="prof-row"><span class="prof-name">${d.n}</span><div class="prof-track"><div class="prof-fill" style="width:0" data-v="${d.v}"></div></div><span class="prof-n">${d.v}</span></div>`;
   });
 }
-
-function animateBars() {
+function animateBars(){
   buildBars();
-  document.querySelectorAll('.prof-fill').forEach(el => el.style.width = el.dataset.v + '%');
+  document.querySelectorAll('.prof-fill').forEach(el=>el.style.width=el.dataset.v+'%');
 }
-
 buildBars();
-setTimeout(animateBars, 300);
+setTimeout(animateBars,400);
 </script>
-</body>
-</html>
+</body></html>
