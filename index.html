@@ -1,4 +1,13 @@
-<html><head><style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eva Lin · Data Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400;500&display=swap');
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -8,7 +17,7 @@
   --green:#3d6b4f;--green-light:#eaf2ed;
   --blue:#2c5282;--blue-light:#ebf0f8;
 }
-.port{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;min-height:100vh}
+body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased}
 .wrap{max-width:700px;margin:0 auto;padding:0 0 6rem}
 
 /* HERO */
@@ -40,30 +49,28 @@
 .sec-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:10px}
 .sec-label::after{content:'';flex:1;height:1px;background:var(--sand)}
 
-/* ── ABOUT ME ── */
+/* ABOUT ME */
 .bio-card{background:#fff;border:1px solid var(--sand);border-radius:12px;padding:1.6rem 1.6rem;margin-bottom:1.2rem;position:relative;overflow:hidden}
 .bio-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent);border-radius:3px 0 0 3px}
 .bio-text{font-size:14px;line-height:1.85;color:var(--ink2)}
 .bio-text strong{color:var(--ink);font-weight:500}
 .bio-text em{font-style:italic;color:var(--accent)}
 
-/* JOURNEY TIMELINE */
+/* TIMELINE */
 .timeline{display:flex;flex-direction:column;gap:0;margin-bottom:1.2rem}
 .tl-item{display:grid;grid-template-columns:90px 1fr;gap:0 1.2rem;position:relative}
 .tl-item:not(:last-child) .tl-line{position:absolute;left:89px;top:22px;bottom:-8px;width:1px;background:var(--sand)}
 .tl-year{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3);padding-top:4px;text-align:right;letter-spacing:.04em}
-.tl-body{padding:0 0 1.4rem 1rem;border-left:none;position:relative}
+.tl-body{padding:0 0 1.4rem 1rem;position:relative}
 .tl-body::before{content:'';position:absolute;left:-5px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--accent);border:2px solid var(--cream)}
 .tl-title{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:3px}
 .tl-sub{font-size:12px;color:var(--accent);margin-bottom:4px}
 .tl-desc{font-size:12px;color:var(--ink2);line-height:1.6}
-
-/* WHV CHIP */
 .whv-badge{display:inline-flex;align-items:center;gap:5px;font-family:'DM Mono',monospace;font-size:9px;background:var(--green-light);color:var(--green);border:1px solid rgba(61,107,79,.2);padding:2px 8px;border-radius:3px;margin-top:4px}
 
-/* DOMAIN CARDS */
+/* DOMAIN */
 .domain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:1.2rem}
-.domain-card{background:#fff;border:1px solid var(--sand);border-radius:10px;padding:1rem 1rem;text-align:center;transition:border-color .15s}
+.domain-card{background:#fff;border:1px solid var(--sand);border-radius:10px;padding:1rem;text-align:center;transition:border-color .15s}
 .domain-card:hover{border-color:var(--accent)}
 .domain-icon{font-size:20px;margin-bottom:6px}
 .domain-name{font-size:12px;font-weight:500;color:var(--ink);margin-bottom:3px}
@@ -106,32 +113,81 @@
 .exp-bullets li::before{content:'·';position:absolute;left:0;color:var(--accent)}
 .exp-tag{display:inline-block;margin-top:.7rem;font-family:'DM Mono',monospace;font-size:9px;background:var(--green-light);color:var(--green);border:1px solid rgba(61,107,79,.2);padding:2px 8px;border-radius:3px}
 
-/* PROJECTS */
-.proj-grid{display:flex;flex-direction:column;gap:12px}
-.proj-card{text-decoration: none; background:#fff;border:1px solid var(--sand);border-radius:10px;padding:1.2rem 1.3rem;transition:all .15s;display:grid;grid-template-columns:1fr auto;gap:0 .8rem}
-.proj-card:hover{text-decoration: none; border-color:var(--accent);background:var(--accent-light)}
+/* ── PROJECT CARDS WITH IMAGE ── */
+.proj-grid{display:flex;flex-direction:column;gap:14px}
+
+.proj-card{
+  text-decoration:none;
+  background:#fff;
+  border:1px solid var(--sand);
+  border-radius:12px;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:1fr 160px;
+  min-height:150px;
+  transition:all .2s;
+}
+.proj-card:hover{
+  border-color:var(--accent);
+  box-shadow:0 4px 20px rgba(196,123,58,.1);
+  transform:translateY(-1px);
+}
+
+/* left: text */
+.proj-content{
+  padding:1.1rem 1.2rem;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.proj-top{}
 .proj-kind{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:5px}
-.proj-name{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:5px}
-.proj-desc{font-size:12px;color:var(--ink2);line-height:1.6;margin-bottom:.8rem}
-.proj-tools{display:flex;flex-wrap:wrap;gap:5px}
+.proj-name{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:5px;line-height:1.3}
+.proj-desc{font-size:12px;color:var(--ink2);line-height:1.6;margin-bottom:.7rem}
+.proj-bottom{display:flex;align-items:center;justify-content:space-between;gap:.5rem;flex-wrap:wrap}
+.proj-tools{display:flex;flex-wrap:wrap;gap:4px}
 .ptool{font-family:'DM Mono',monospace;font-size:10px;border:1px solid var(--sand);color:var(--ink3);padding:2px 7px;border-radius:4px;background:var(--cream2)}
-.proj-arrow{font-size:14px;color:var(--sand);transition:color .15s;margin-top:2px}
-.proj-card:hover .proj-arrow{color:var(--accent)}
-.proj-badge{display:inline-block;margin-top:.5rem;font-family:'DM Mono',monospace;font-size:9px;background:var(--blue-light);color:var(--blue);border:1px solid rgba(44,82,130,.2);padding:2px 8px;border-radius:3px}
+.proj-badge{font-family:'DM Mono',monospace;font-size:9px;background:var(--blue-light);color:var(--blue);border:1px solid rgba(44,82,130,.2);padding:2px 8px;border-radius:3px;white-space:nowrap}
+
+/* right: image */
+.proj-img{
+  border-left:1px solid var(--sand);
+  overflow:hidden;
+  position:relative;
+  background:var(--cream2);
+}
+.proj-img img{
+  width:100%;height:100%;
+  object-fit:cover;
+  object-position:center top;
+  transition:transform .3s ease;
+  display:block;
+}
+.proj-card:hover .proj-img img{transform:scale(1.05)}
 
 /* FOOTER */
 .footer{margin-top:3rem;padding:1.2rem 2rem;border-top:1px solid var(--sand);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px}
 .footer-l{font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:var(--ink3)}
 .footer-r{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3)}
-</style>
 
-</head><body><div class="port"><div class="wrap">
+@media(max-width:520px){
+  .proj-card{grid-template-columns:1fr}
+  .proj-img{height:140px;border-left:none;border-top:1px solid var(--sand)}
+  .prof-row{grid-template-columns:100px 1fr 24px}
+  .domain-grid{grid-template-columns:1fr 1fr}
+  .nav-tabs{padding:0 1rem;overflow-x:auto}
+  .panel{padding:1.5rem 1rem 0}
+  .hero{padding:2rem 1.2rem 1.8rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-tag">Data Analyst · Data Scientist· Open to opportunities</div>
+  <div class="hero-tag">Data Analyst · Data Scientist · Open to opportunities</div>
   <h1 class="hero-name">Eva <em>Lin</em></h1>
-
   <p class="hero-summary">
     <strong>1+ year</strong> translating complex datasets into business decisions.
     Master of IT (Data Science) from <strong>QUT, Australia</strong> — GPA 6.2/7, Academic Excellence Award.
@@ -157,10 +213,8 @@
   <div class="tab" onclick="switchTab('proj',this)">Projects</div>
 </div>
 
-<!-- ══ ABOUT ME ══ -->
+<!-- ABOUT ME -->
 <div class="panel active" id="tab-about">
-
-  <!-- Bio -->
   <div class="sec-label" style="margin-top:1.5rem">Who I Am</div>
   <div class="bio-card">
     <p class="bio-text">
@@ -178,16 +232,15 @@
     <p class="bio-text">
       During my master's, I worked as an <strong>Assistant Data Analyst</strong> at QUT, building Power BI dashboards and SQL pipelines
       for real institutional decisions. I also collaborated with the Queensland Government on a deep learning project,
-      and won a health-tech hackathon along the way. 
+      and won a health-tech hackathon along the way.
     </p>
     <br>
     <p class="bio-text">
-      What makes me a bit different is my <strong>cross-domain background</strong>:  I understand the language of education, e-commerce, and finance, which means I can ask the right business questions before analysing the data.
+      What makes me a bit different is my <strong>cross-domain background</strong>: I understand the language of education, e-commerce, and finance, which means I can ask the right business questions before analysing the data.
       I'm passionate about data storytelling, machine learning, and AI technologies, and I enjoy continuously learning and applying new knowledge to solve real-world problems.
     </p>
   </div>
 
-  <!-- Journey -->
   <div class="sec-label">My Journey</div>
   <div class="timeline">
     <div class="tl-item">
@@ -233,7 +286,7 @@
       <div class="tl-body">
         <div class="tl-title">Assistant Data Analyst · QUT</div>
         <div class="tl-sub">Data and Analytics · Digital Business Solutions</div>
-        <div class="tl-desc">Worked as a casual data analyst in DnA Dep., supported data-driven decision making. </div>
+        <div class="tl-desc">Worked as a casual data analyst in DnA Dep., supported data-driven decision making.</div>
       </div>
     </div>
     <div class="tl-item">
@@ -246,27 +299,13 @@
     </div>
   </div>
 
-  <!-- Domain expertise -->
   <div class="sec-label">Domain Knowledge</div>
   <div class="domain-grid">
-    <div class="domain-card">
-      <div class="domain-icon">🎓</div>
-      <div class="domain-name">Education</div>
-      <div class="domain-sub">Student lifecycle, enrolment analytics</div>
-    </div>
-    <div class="domain-card">
-      <div class="domain-icon">🛒</div>
-      <div class="domain-name">E-Commerce</div>
-      <div class="domain-sub">Campaign analysis, conversion, CTR</div>
-    </div>
-    <div class="domain-card">
-      <div class="domain-icon">📊</div>
-      <div class="domain-name">Finance</div>
-      <div class="domain-sub">Supply chain, international business</div>
-    </div>
+    <div class="domain-card"><div class="domain-icon">🎓</div><div class="domain-name">Education</div><div class="domain-sub">Student lifecycle, enrolment analytics</div></div>
+    <div class="domain-card"><div class="domain-icon">🛒</div><div class="domain-name">E-Commerce</div><div class="domain-sub">Campaign analysis, conversion, CTR</div></div>
+    <div class="domain-card"><div class="domain-icon">📊</div><div class="domain-name">Finance</div><div class="domain-sub">Supply chain, international business</div></div>
   </div>
 
-  <!-- Skills -->
   <div class="sec-label">Technical Skills</div>
   <div class="skills-wrap">
     <div>
@@ -302,9 +341,11 @@
     </div>
   </div>
 
+  <div class="sec-label" style="margin-top:.5rem">Proficiency</div>
+  <div class="prof-list" id="profs"></div>
+  <div style="height:1.5rem"></div>
 
-  <!-- Education -->
-  <div class="sec-label" style="margin-top:.5rem">Education &amp; Certifications</div>
+  <div class="sec-label">Education &amp; Certifications</div>
   <div class="edu-list">
     <div class="edu-card">
       <div class="edu-deg">Master of Information Technology (Data Science)</div>
@@ -320,12 +361,10 @@
       <div class="edu-detail">E-Commerce &amp; FinTech Micro Program · B2B Cross-border E-commerce Competition<br>
         <span class="edu-honor">🏅 Order Award &amp; Listing Award</span></div>
     </div>
-   
   </div>
-
 </div>
 
-<!-- ══ EXPERIENCE ══ -->
+<!-- EXPERIENCE -->
 <div class="panel" id="tab-exp">
   <div class="sec-label" style="margin-top:1.5rem">Work Experience</div>
   <div class="exp-list">
@@ -480,37 +519,50 @@
   </div>
 </div>
 
-
 <div class="footer">
   <span class="footer-l">Eva Lin</span>
   <span class="footer-r">Data Analyst · 2026</span>
 </div>
 
-</div></div>
+</div>
+
 <script>
-function switchTab(id,el){
-  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  document.getElementById('tab-'+id).classList.add('active');
+function switchTab(id, el) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
   el.classList.add('active');
-  setTimeout(animateBars,100);
+  if (id === 'about') setTimeout(animateBars, 100);
 }
-const profs=[
-  {n:'SQL',v:88},{n:'Python',v:82},{n:'Power BI / DAX',v:85},
-  {n:'Tableau',v:75},{n:'Machine Learning',v:68},{n:'AWS / GCP',v:60}
+
+const profs = [
+  { n: 'SQL', v: 88 },
+  { n: 'Python', v: 82 },
+  { n: 'Power BI / DAX', v: 85 },
+  { n: 'Tableau', v: 75 },
+  { n: 'Machine Learning', v: 68 },
+  { n: 'AWS / GCP', v: 60 },
 ];
-function buildBars(){
-  const c=document.getElementById('profs');
-  if(!c||c.children.length)return;
-  profs.forEach(d=>{
-    c.innerHTML+=`<div class="prof-row"><span class="prof-name">${d.n}</span><div class="prof-track"><div class="prof-fill" style="width:0" data-v="${d.v}"></div></div><span class="prof-n">${d.v}</span></div>`;
+
+function buildBars() {
+  const c = document.getElementById('profs');
+  if (!c || c.children.length) return;
+  profs.forEach(d => {
+    c.innerHTML += `<div class="prof-row">
+      <span class="prof-name">${d.n}</span>
+      <div class="prof-track"><div class="prof-fill" style="width:0" data-v="${d.v}"></div></div>
+      <span class="prof-n">${d.v}</span>
+    </div>`;
   });
 }
-function animateBars(){
+
+function animateBars() {
   buildBars();
-  document.querySelectorAll('.prof-fill').forEach(el=>el.style.width=el.dataset.v+'%');
+  document.querySelectorAll('.prof-fill').forEach(el => el.style.width = el.dataset.v + '%');
 }
+
 buildBars();
-setTimeout(animateBars,400);
+setTimeout(animateBars, 400);
 </script>
-</body></html>
+</body>
+</html>
