@@ -1,4 +1,13 @@
-<html><head><style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eva Lin · Data Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400;500&display=swap');
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -8,7 +17,7 @@
   --green:#3d6b4f;--green-light:#eaf2ed;
   --blue:#2c5282;--blue-light:#ebf0f8;
 }
-.port{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;min-height:100vh}
+body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased}
 .wrap{max-width:700px;margin:0 auto;padding:0 0 6rem}
 
 /* HERO */
@@ -40,30 +49,28 @@
 .sec-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:10px}
 .sec-label::after{content:'';flex:1;height:1px;background:var(--sand)}
 
-/* ── ABOUT ME ── */
+/* ABOUT ME */
 .bio-card{background:#fff;border:1px solid var(--sand);border-radius:12px;padding:1.6rem 1.6rem;margin-bottom:1.2rem;position:relative;overflow:hidden}
 .bio-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent);border-radius:3px 0 0 3px}
 .bio-text{font-size:14px;line-height:1.85;color:var(--ink2)}
 .bio-text strong{color:var(--ink);font-weight:500}
 .bio-text em{font-style:italic;color:var(--accent)}
 
-/* JOURNEY TIMELINE */
+/* TIMELINE */
 .timeline{display:flex;flex-direction:column;gap:0;margin-bottom:1.2rem}
 .tl-item{display:grid;grid-template-columns:90px 1fr;gap:0 1.2rem;position:relative}
 .tl-item:not(:last-child) .tl-line{position:absolute;left:89px;top:22px;bottom:-8px;width:1px;background:var(--sand)}
 .tl-year{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3);padding-top:4px;text-align:right;letter-spacing:.04em}
-.tl-body{padding:0 0 1.4rem 1rem;border-left:none;position:relative}
+.tl-body{padding:0 0 1.4rem 1rem;position:relative}
 .tl-body::before{content:'';position:absolute;left:-5px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--accent);border:2px solid var(--cream)}
 .tl-title{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:3px}
 .tl-sub{font-size:12px;color:var(--accent);margin-bottom:4px}
 .tl-desc{font-size:12px;color:var(--ink2);line-height:1.6}
-
-/* WHV CHIP */
 .whv-badge{display:inline-flex;align-items:center;gap:5px;font-family:'DM Mono',monospace;font-size:9px;background:var(--green-light);color:var(--green);border:1px solid rgba(61,107,79,.2);padding:2px 8px;border-radius:3px;margin-top:4px}
 
-/* DOMAIN CARDS */
+/* DOMAIN */
 .domain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:1.2rem}
-.domain-card{background:#fff;border:1px solid var(--sand);border-radius:10px;padding:1rem 1rem;text-align:center;transition:border-color .15s}
+.domain-card{background:#fff;border:1px solid var(--sand);border-radius:10px;padding:1rem;text-align:center;transition:border-color .15s}
 .domain-card:hover{border-color:var(--accent)}
 .domain-icon{font-size:20px;margin-bottom:6px}
 .domain-name{font-size:12px;font-weight:500;color:var(--ink);margin-bottom:3px}
@@ -106,32 +113,95 @@
 .exp-bullets li::before{content:'·';position:absolute;left:0;color:var(--accent)}
 .exp-tag{display:inline-block;margin-top:.7rem;font-family:'DM Mono',monospace;font-size:9px;background:var(--green-light);color:var(--green);border:1px solid rgba(61,107,79,.2);padding:2px 8px;border-radius:3px}
 
-/* PROJECTS */
-.proj-grid{display:flex;flex-direction:column;gap:12px}
-.proj-card{text-decoration: none; background:#fff;border:1px solid var(--sand);border-radius:10px;padding:1.2rem 1.3rem;transition:all .15s;display:grid;grid-template-columns:1fr auto;gap:0 .8rem}
-.proj-card:hover{text-decoration: none; border-color:var(--accent);background:var(--accent-light)}
+/* ── PROJECT CARDS WITH IMAGE ── */
+.proj-grid{display:flex;flex-direction:column;gap:14px}
+
+.proj-card{
+  text-decoration:none;
+  background:#fff;
+  border:1px solid var(--sand);
+  border-radius:12px;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:1fr 140px;
+  transition:all .2s;
+  min-height:140px;
+}
+.proj-card:hover{
+  border-color:var(--accent);
+  box-shadow:0 4px 20px rgba(196,123,58,.1);
+  transform:translateY(-1px);
+}
+
+/* left: text content */
+.proj-content{
+  padding:1.1rem 1.2rem;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.proj-top{}
 .proj-kind{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:5px}
-.proj-name{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:5px}
-.proj-desc{font-size:12px;color:var(--ink2);line-height:1.6;margin-bottom:.8rem}
-.proj-tools{display:flex;flex-wrap:wrap;gap:5px}
+.proj-name{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:5px;line-height:1.3}
+.proj-desc{font-size:12px;color:var(--ink2);line-height:1.6;margin-bottom:.7rem}
+.proj-bottom{display:flex;align-items:center;justify-content:space-between;gap:.5rem;flex-wrap:wrap}
+.proj-tools{display:flex;flex-wrap:wrap;gap:4px}
 .ptool{font-family:'DM Mono',monospace;font-size:10px;border:1px solid var(--sand);color:var(--ink3);padding:2px 7px;border-radius:4px;background:var(--cream2)}
-.proj-arrow{font-size:14px;color:var(--sand);transition:color .15s;margin-top:2px}
-.proj-card:hover .proj-arrow{color:var(--accent)}
-.proj-badge{display:inline-block;margin-top:.5rem;font-family:'DM Mono',monospace;font-size:9px;background:var(--blue-light);color:var(--blue);border:1px solid rgba(44,82,130,.2);padding:2px 8px;border-radius:3px}
+.proj-badge{font-family:'DM Mono',monospace;font-size:9px;background:var(--blue-light);color:var(--blue);border:1px solid rgba(44,82,130,.2);padding:2px 8px;border-radius:3px;white-space:nowrap}
+
+/* right: image panel */
+.proj-img{
+  position:relative;
+  background:var(--cream2);
+  border-left:1px solid var(--sand);
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+.proj-img img{
+  width:100%;height:100%;
+  object-fit:cover;
+  transition:transform .3s ease;
+  display:block;
+}
+.proj-card:hover .proj-img img{transform:scale(1.04)}
+
+/* fallback when no image: show icon + arrow */
+.proj-img-placeholder{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:6px;width:100%;height:100%;
+  color:var(--sand);
+  transition:color .2s;
+}
+.proj-card:hover .proj-img-placeholder{color:var(--accent)}
+.proj-img-placeholder .pi-icon{font-size:22px}
+.proj-img-placeholder .pi-arrow{font-size:18px;font-weight:300}
 
 /* FOOTER */
 .footer{margin-top:3rem;padding:1.2rem 2rem;border-top:1px solid var(--sand);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px}
 .footer-l{font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:var(--ink3)}
 .footer-r{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3)}
-</style>
 
-</head><body><div class="port"><div class="wrap">
+@media(max-width:520px){
+  .proj-card{grid-template-columns:1fr}
+  .proj-img{height:120px;border-left:none;border-top:1px solid var(--sand)}
+  .prof-row{grid-template-columns:100px 1fr 24px}
+  .domain-grid{grid-template-columns:1fr 1fr}
+  .nav-tabs{padding:0 1rem;overflow-x:auto}
+  .panel{padding:1.5rem 1rem 0}
+  .hero{padding:2rem 1.2rem 1.8rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-tag">Data Analyst · Data Scientist· Open to opportunities</div>
+  <div class="hero-tag">Data Analyst · Data Scientist · Open to opportunities</div>
   <h1 class="hero-name">Eva <em>Lin</em></h1>
-
   <p class="hero-summary">
     <strong>1+ year</strong> translating complex datasets into business decisions.
     Master of IT (Data Science) from <strong>QUT, Australia</strong> — GPA 6.2/7, Academic Excellence Award.
@@ -157,10 +227,8 @@
   <div class="tab" onclick="switchTab('proj',this)">Projects</div>
 </div>
 
-<!-- ══ ABOUT ME ══ -->
+<!-- ABOUT ME -->
 <div class="panel active" id="tab-about">
-
-  <!-- Bio -->
   <div class="sec-label" style="margin-top:1.5rem">Who I Am</div>
   <div class="bio-card">
     <p class="bio-text">
@@ -178,16 +246,15 @@
     <p class="bio-text">
       During my master's, I worked as an <strong>Assistant Data Analyst</strong> at QUT, building Power BI dashboards and SQL pipelines
       for real institutional decisions. I also collaborated with the Queensland Government on a deep learning project,
-      and won a health-tech hackathon along the way. 
+      and won a health-tech hackathon along the way.
     </p>
     <br>
     <p class="bio-text">
-      What makes me a bit different is my <strong>cross-domain background</strong>:  I understand the language of education, e-commerce, and finance, which means I can ask the right business questions before analysing the data.
+      What makes me a bit different is my <strong>cross-domain background</strong>: I understand the language of education, e-commerce, and finance, which means I can ask the right business questions before analysing the data.
       I'm passionate about data storytelling, machine learning, and AI technologies, and I enjoy continuously learning and applying new knowledge to solve real-world problems.
     </p>
   </div>
 
-  <!-- Journey -->
   <div class="sec-label">My Journey</div>
   <div class="timeline">
     <div class="tl-item">
@@ -215,7 +282,7 @@
         <div class="tl-title">Working Holiday · Australia</div>
         <div class="tl-sub">Broadening horizons, sharpening English, preparing for the next chapter</div>
         <div class="tl-desc">Decided to invest in myself — sat the IELTS, explored Australia, and committed to pursuing a master's in data science.</div>
-        
+        <span class="whv-badge">✈ Working Holiday Visa</span>
       </div>
     </div>
     <div class="tl-item">
@@ -233,7 +300,7 @@
       <div class="tl-body">
         <div class="tl-title">Assistant Data Analyst · QUT</div>
         <div class="tl-sub">Data and Analytics · Digital Business Solutions</div>
-        <div class="tl-desc">Worked as a casual data analyst in DnA Dep., supported data-driven decision making. </div>
+        <div class="tl-desc">Worked as a casual data analyst in DnA Dep., supported data-driven decision making.</div>
       </div>
     </div>
     <div class="tl-item">
@@ -246,33 +313,19 @@
     </div>
   </div>
 
-  <!-- Domain expertise -->
   <div class="sec-label">Domain Knowledge</div>
   <div class="domain-grid">
-    <div class="domain-card">
-      <div class="domain-icon">🎓</div>
-      <div class="domain-name">Education</div>
-      <div class="domain-sub">Student lifecycle, enrolment analytics</div>
-    </div>
-    <div class="domain-card">
-      <div class="domain-icon">🛒</div>
-      <div class="domain-name">E-Commerce</div>
-      <div class="domain-sub">Campaign analysis, conversion, CTR</div>
-    </div>
-    <div class="domain-card">
-      <div class="domain-icon">📊</div>
-      <div class="domain-name">Finance</div>
-      <div class="domain-sub">Supply chain, international business</div>
-    </div>
+    <div class="domain-card"><div class="domain-icon">🎓</div><div class="domain-name">Education</div><div class="domain-sub">Student lifecycle, enrolment analytics</div></div>
+    <div class="domain-card"><div class="domain-icon">🛒</div><div class="domain-name">E-Commerce</div><div class="domain-sub">Campaign analysis, conversion, CTR</div></div>
+    <div class="domain-card"><div class="domain-icon">📊</div><div class="domain-name">Finance</div><div class="domain-sub">Supply chain, international business</div></div>
   </div>
 
-  <!-- Skills -->
   <div class="sec-label">Technical Skills</div>
   <div class="skills-wrap">
     <div>
       <div class="skill-group-label">Data Analysis &amp; BI</div>
       <div class="skill-pills">
-        <span class="sk">Power BI</span><span class="sk">Tableau</span>
+        <span class="sk hi">Power BI</span><span class="sk hi">Tableau</span>
         <span class="sk">DAX</span><span class="sk">Power Query</span>
         <span class="sk">Microsoft Fabric</span><span class="sk">Google Analytics</span>
       </div>
@@ -280,7 +333,7 @@
     <div>
       <div class="skill-group-label">Programming &amp; Query</div>
       <div class="skill-pills">
-        <span class="sk">Python</span><span class="sk">SQL (MySQL)</span>
+        <span class="sk hi">Python</span><span class="sk hi">SQL (MySQL)</span>
         <span class="sk">pandas</span><span class="sk">NumPy</span>
         <span class="sk">matplotlib</span><span class="sk">seaborn</span>
       </div>
@@ -295,16 +348,18 @@
     <div>
       <div class="skill-group-label">Analytics Methods</div>
       <div class="skill-pills">
-        <span class="sk">A/B Testing</span><span class="sk">EDA</span>
+        <span class="sk hi">A/B Testing</span><span class="sk hi">EDA</span>
         <span class="sk">Statistical Analysis</span><span class="sk">Machine Learning</span>
         <span class="sk">Cohort Analysis</span><span class="sk">ETL</span>
       </div>
     </div>
   </div>
 
+  <div class="sec-label" style="margin-top:.5rem">Proficiency</div>
+  <div class="prof-list" id="profs"></div>
+  <div style="height:1.5rem"></div>
 
-  <!-- Education -->
-  <div class="sec-label" style="margin-top:.5rem">Education &amp; Certifications</div>
+  <div class="sec-label">Education &amp; Certifications</div>
   <div class="edu-list">
     <div class="edu-card">
       <div class="edu-deg">Master of Information Technology (Data Science)</div>
@@ -320,12 +375,10 @@
       <div class="edu-detail">E-Commerce &amp; FinTech Micro Program · B2B Cross-border E-commerce Competition<br>
         <span class="edu-honor">🏅 Order Award &amp; Listing Award</span></div>
     </div>
-   
   </div>
-
 </div>
 
-<!-- ══ EXPERIENCE ══ -->
+<!-- EXPERIENCE -->
 <div class="panel" id="tab-exp">
   <div class="sec-label" style="margin-top:1.5rem">Work Experience</div>
   <div class="exp-list">
@@ -363,60 +416,132 @@
   </div>
 </div>
 
-<!-- ══ PROJECTS ══ -->
+<!-- PROJECTS -->
 <div class="panel" id="tab-proj">
   <div class="sec-label" style="margin-top:1.5rem">Projects</div>
   <div class="proj-grid">
+
+    <!-- 1. Bank Churn -->
     <a class="proj-card" href="https://github.com/yunghsineva/Bank-Churn-Analysis" target="_blank">
-      <div>
-        <div class="proj-kind">EDA · Personal Project</div>
-        <div class="proj-name">Bank Customer Churn Analysis</div>
-        <div class="proj-desc">Identified low-income new customers as highest-risk cohort (64% churn rate). Quantified $52,320 annual revenue at risk — retention strategy achieves 1.2× ROI at 25% recovery.</div>
-        <div class="proj-tools"><span class="ptool">Python</span><span class="ptool">pandas</span><span class="ptool">seaborn</span><span class="ptool">Chi-square</span></div>
-        <span class="proj-badge">Apr 2026</span>
+      <div class="proj-content">
+        <div class="proj-top">
+          <div class="proj-kind">EDA · Personal Project</div>
+          <div class="proj-name">Bank Customer Churn Analysis</div>
+          <div class="proj-desc">Identified low-income new customers as highest-risk cohort (64% churn rate). Quantified $52,320 annual revenue at risk — retention strategy achieves 1.2× ROI at 25% recovery.</div>
+        </div>
+        <div class="proj-bottom">
+          <div class="proj-tools">
+            <span class="ptool">Python</span><span class="ptool">pandas</span><span class="ptool">seaborn</span><span class="ptool">Chi-square</span>
+          </div>
+          <span class="proj-badge">Apr 2026</span>
+        </div>
       </div>
-      <div class="proj-arrow">↗</div>
+      <div class="proj-img">
+        <!-- Replace the src below with your actual screenshot URL or relative path e.g. "images/churn.png" -->
+        <img
+          src="https://www.shutterstock.com/image-photo/businesswoman-analyzing-customer-churn-rate-600nw-2673697463.jpg"
+          alt="Bank Churn Analysis preview"
+          onerror="this.parentElement.innerHTML='<div class=\'proj-img-placeholder\'><div class=\'pi-icon\'>📊</div><div class=\'pi-arrow\'>↗</div></div>'"
+        >
+      </div>
     </a>
+
+    <!-- 2. Queensland Imagery -->
     <a class="proj-card" href="https://github.com/yunghsineva/Unlocking-Queensland-Imagery-Data" target="_blank">
-      <div>
-        <div class="proj-kind">Deep Learning · Industry Project · QUT × Qld Gov</div>
-        <div class="proj-name">Unlocking Queensland's Imagery Data</div>
-        <div class="proj-desc">Collaborated with Queensland Government to build a segmentation model extracting building footprints from aerial imagery. Achieved MIoU of 88.39% using Mask2Former &amp; SAM.</div>
-        <div class="proj-tools"><span class="ptool">Python</span><span class="ptool">PyTorch</span><span class="ptool">Vertex AI</span><span class="ptool">GCP</span><span class="ptool">Jira</span></div>
-        <span class="proj-badge">Feb – Jun 2025</span>
+      <div class="proj-content">
+        <div class="proj-top">
+          <div class="proj-kind">Deep Learning · Industry Project · QUT × Qld Gov</div>
+          <div class="proj-name">Unlocking Queensland's Imagery Data</div>
+          <div class="proj-desc">Collaborated with Queensland Government to build a segmentation model extracting building footprints from aerial imagery. Achieved MIoU of 88.39% using Mask2Former &amp; SAM.</div>
+        </div>
+        <div class="proj-bottom">
+          <div class="proj-tools">
+            <span class="ptool">Python</span><span class="ptool">PyTorch</span><span class="ptool">Vertex AI</span><span class="ptool">GCP</span><span class="ptool">Jira</span>
+          </div>
+          <span class="proj-badge">Feb – Jun 2025</span>
+        </div>
       </div>
-      <div class="proj-arrow">↗</div>
+      <div class="proj-img">
+        <img
+          src="https://raw.githubusercontent.com/yunghsineva/Unlocking-Queensland-Imagery-Data/main/preview.png"
+          alt="Queensland Imagery preview"
+          onerror="this.parentElement.innerHTML='<div class=\'proj-img-placeholder\'><div class=\'pi-icon\'>🛰️</div><div class=\'pi-arrow\'>↗</div></div>'"
+        >
+      </div>
     </a>
+
+    <!-- 3. Health Tech Hackathon -->
     <a class="proj-card" href="https://drive.google.com/drive/folders/1390KbLMvBRWRRQQ5J_kZgm2NAI7-v_9D" target="_blank">
-      <div>
-        <div class="proj-kind">Hackathon · AWS · Won 🏆</div>
-        <div class="proj-name">Health Tech ProtoComp</div>
-        <div class="proj-desc">Won Innovation Central Brisbane hackathon. Proposed AI summarization + hardware wristband for aged care patient data management. Set up AWS (EC2, S3, RDS) prototype infrastructure.</div>
-        <div class="proj-tools"><span class="ptool">AWS EC2</span><span class="ptool">S3</span><span class="ptool">RDS</span><span class="ptool">Node.js</span></div>
-        <span class="proj-badge">Sep – Dec 2024</span>
+      <div class="proj-content">
+        <div class="proj-top">
+          <div class="proj-kind">Hackathon · AWS · Won 🏆</div>
+          <div class="proj-name">Health Tech ProtoComp</div>
+          <div class="proj-desc">Won Innovation Central Brisbane hackathon. Proposed AI summarization + hardware wristband for aged care patient data management. Set up AWS (EC2, S3, RDS) prototype infrastructure.</div>
+        </div>
+        <div class="proj-bottom">
+          <div class="proj-tools">
+            <span class="ptool">AWS EC2</span><span class="ptool">S3</span><span class="ptool">RDS</span><span class="ptool">Node.js</span>
+          </div>
+          <span class="proj-badge">Sep – Dec 2024</span>
+        </div>
       </div>
-      <div class="proj-arrow">↗</div>
+      <div class="proj-img">
+        <img
+          src=""
+          alt="Health Tech preview"
+          onerror="this.parentElement.innerHTML='<div class=\'proj-img-placeholder\'><div class=\'pi-icon\'>🏥</div><div class=\'pi-arrow\'>↗</div></div>'"
+        >
+      </div>
     </a>
+
+    <!-- 4. Anomaly Detection -->
     <a class="proj-card" href="https://github.com/yunghsineva/Anomaly-Detection-for-Water-Meter-Monitoring-with-Machine-Learning" target="_blank">
-      <div>
-        <div class="proj-kind">Machine Learning · Research Project · QUT</div>
-        <div class="proj-name">Anomaly Detection for Water Meter Monitoring</div>
-        <div class="proj-desc">Identified and predictied unusual household water usage patterns on a daily and weekly basis using a hybrid model which combines the advantages of supervised and unsupervised methods.</div>
-        <div class="proj-tools"><span class="ptool">Python</span><span class="ptool">TensorFlow</span></div>
-        <span class="proj-badge">Aug – Nov 2024</span>
+      <div class="proj-content">
+        <div class="proj-top">
+          <div class="proj-kind">Machine Learning · Research Project · QUT</div>
+          <div class="proj-name">Anomaly Detection for Water Meter Monitoring</div>
+          <div class="proj-desc">Identified and predicted unusual household water usage patterns on a daily and weekly basis using a hybrid model combining supervised and unsupervised methods.</div>
+        </div>
+        <div class="proj-bottom">
+          <div class="proj-tools">
+            <span class="ptool">Python</span><span class="ptool">TensorFlow</span>
+          </div>
+          <span class="proj-badge">Aug – Nov 2024</span>
+        </div>
       </div>
-      <div class="proj-arrow">↗</div>
+      <div class="proj-img">
+        <img
+          src="https://raw.githubusercontent.com/yunghsineva/Anomaly-Detection-for-Water-Meter-Monitoring-with-Machine-Learning/main/preview.png"
+          alt="Anomaly Detection preview"
+          onerror="this.parentElement.innerHTML='<div class=\'proj-img-placeholder\'><div class=\'pi-icon\'>💧</div><div class=\'pi-arrow\'>↗</div></div>'"
+        >
+      </div>
     </a>
+
+    <!-- 5. Crime Dashboard -->
     <a class="proj-card" href="https://public.tableau.com/app/profile/yung.hsin.lin/viz/CrimesinUSASpringfieldfrom1998to2019/Final#1" target="_blank">
-      <div>
-        <div class="proj-kind">Visualisation · Academic Assessment · QUT</div>
-        <div class="proj-name">Crime Analysis Dashboard </div>
-        <div class="proj-desc">Designed an interactive Tableau dashboard with customized filters to analyze injury-related crimes across Springfield from 1998–2019, enabling cross-comparison of trends by stakeholder need.</div>
-        <div class="proj-tools"><span class="ptool">Tableau</span></div>
-        <span class="proj-badge">Aug – Oct 2023</span>
+      <div class="proj-content">
+        <div class="proj-top">
+          <div class="proj-kind">Visualisation · Academic Assessment · QUT</div>
+          <div class="proj-name">Crime Analysis Dashboard</div>
+          <div class="proj-desc">Designed an interactive Tableau dashboard with customised filters to analyse injury-related crimes across Springfield from 1998–2019, enabling cross-comparison of trends by stakeholder need.</div>
+        </div>
+        <div class="proj-bottom">
+          <div class="proj-tools">
+            <span class="ptool">Tableau</span>
+          </div>
+          <span class="proj-badge">Aug – Oct 2023</span>
+        </div>
       </div>
-      <div class="proj-arrow">↗</div>
+      <div class="proj-img">
+        <img
+          src=""
+          alt="Crime Dashboard preview"
+          onerror="this.parentElement.innerHTML='<div class=\'proj-img-placeholder\'><div class=\'pi-icon\'>📈</div><div class=\'pi-arrow\'>↗</div></div>'"
+        >
+      </div>
     </a>
+
   </div>
 </div>
 
@@ -425,31 +550,45 @@
   <span class="footer-r">Data Analyst · 2026</span>
 </div>
 
-</div></div>
+</div>
+
 <script>
-function switchTab(id,el){
-  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  document.getElementById('tab-'+id).classList.add('active');
+function switchTab(id, el) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
   el.classList.add('active');
-  setTimeout(animateBars,100);
+  if (id === 'about') setTimeout(animateBars, 100);
 }
-const profs=[
-  {n:'SQL',v:88},{n:'Python',v:82},{n:'Power BI / DAX',v:85},
-  {n:'Tableau',v:75},{n:'Machine Learning',v:68},{n:'AWS / GCP',v:60}
+
+const profs = [
+  { n: 'SQL', v: 88 },
+  { n: 'Python', v: 82 },
+  { n: 'Power BI / DAX', v: 85 },
+  { n: 'Tableau', v: 75 },
+  { n: 'Machine Learning', v: 68 },
+  { n: 'AWS / GCP', v: 60 },
 ];
-function buildBars(){
-  const c=document.getElementById('profs');
-  if(!c||c.children.length)return;
-  profs.forEach(d=>{
-    c.innerHTML+=`<div class="prof-row"><span class="prof-name">${d.n}</span><div class="prof-track"><div class="prof-fill" style="width:0" data-v="${d.v}"></div></div><span class="prof-n">${d.v}</span></div>`;
+
+function buildBars() {
+  const c = document.getElementById('profs');
+  if (!c || c.children.length) return;
+  profs.forEach(d => {
+    c.innerHTML += `<div class="prof-row">
+      <span class="prof-name">${d.n}</span>
+      <div class="prof-track"><div class="prof-fill" style="width:0" data-v="${d.v}"></div></div>
+      <span class="prof-n">${d.v}</span>
+    </div>`;
   });
 }
-function animateBars(){
+
+function animateBars() {
   buildBars();
-  document.querySelectorAll('.prof-fill').forEach(el=>el.style.width=el.dataset.v+'%');
+  document.querySelectorAll('.prof-fill').forEach(el => el.style.width = el.dataset.v + '%');
 }
+
 buildBars();
-setTimeout(animateBars,400);
+setTimeout(animateBars, 400);
 </script>
-</body></html>
+</body>
+</html>
